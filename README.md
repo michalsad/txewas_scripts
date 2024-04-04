@@ -1,6 +1,6 @@
 This repository contains scripts used to perform the analysis presented in:
 
-* M. Sadowski, M. Thompson, J. Mefford, T. Haldar, A. Oni-Orisan, R. Border, A. Pazokitoroudi, J. F. Ayroles, S. Sankararaman, A. Dahl, and N. Zaitlen, “Characterizing the genetic architecture of drug response using gene-context interaction methods”, 2024.
+* M. Sadowski, M. Thompson, J. Mefford, T. Haldar, A. Oni-Orisan, R. Border, A. Pazokitoroudi, J. F. Ayroles, S. Sankararaman, A. Dahl, and N. Zaitlen, “Characterizing the genetic architecture of drug response using gene-context interaction methods”, medRxiv, 2024. https://www.medrxiv.org/content/10.1101/2024.03.29.24305093v1.
 
 ## `txewas.R`: Gene-environment interaction test
 Given a phenotype, an environmental factor, and imputed expression of a gene for a set of individuals, tests if the interaction between the expression of this gene and the environmental variable is associated with the phenotype. Run: `Rscript txewas.R -h` to see usage information. To compute imputed expression for your data, please refer to the TWAS website: http://gusevlab.org/projects/fusion.
