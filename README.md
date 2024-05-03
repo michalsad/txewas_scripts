@@ -9,7 +9,7 @@ Given a phenotype, an environmental factor, and imputed expression of a gene for
 Given TxEWAS associations in multiple tissues, performs the hierarchical FDR correction. Run: `Rscript hFDR.R -h` to see usage information. It assumes that all TxEWAS associations for a given tissue are saved in one file.
 
 ## `PRS`: Custom R package for calculating PRS
-The package can be installed using the R package manager: `install.packages("PRS_0.0.0.9000.tar.gz")`. Scripts in `runPRS` were used to work with the `PRS` package---usage information for every script can be accessed with the `-h` option.
+The package can be installed using the R package manager: `install.packages("PRS_0.0.0.9000.tar.gz")`. Scripts in `runPRS` were used to work with the `PRS` package&#151usage information for every script can be accessed with the `-h` option.
 
 For the heritability analysis tools, please see: https://github.com/andywdahl/gxemm.
 
