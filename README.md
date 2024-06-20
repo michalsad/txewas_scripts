@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/662841914.svg)](https://zenodo.org/badge/latestdoi/662841914)
+
 This repository contains scripts used to perform the analysis presented in:
 
 * M. Sadowski, M. Thompson, J. Mefford, T. Haldar, A. Oni-Orisan, R. Border, A. Pazokitoroudi, J. F. Ayroles, S. Sankararaman, A. Dahl, and N. Zaitlen, “Characterizing the genetic architecture of drug response using gene-context interaction methods”, medRxiv, 2024. https://www.medrxiv.org/content/10.1101/2024.03.29.24305093v1.
