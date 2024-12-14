@@ -13,11 +13,11 @@ Given a phenotype, an environmental factor, and imputed expression of a gene for
 ## `hFDR.R`: Hierarchical FDR control
 Given TxEWAS associations in multiple tissues, performs the hierarchical FDR correction. Uses [TreeQTL](http://bioinformatics.org/treeqtl). Run: `Rscript hFDR.R -h` to see usage information.
 
-## `create_bigSNP.R`: Create an easy-to-load bigSNP object from a BGEN file
+## `create_bigSNP.R`: Create a bigSNP object from a BGEN file
 Reads in a BGEN file and creates a bigSNP object that enables fast access to imputed allele dosages from R. Uses [bigsnpr](https://privefl.github.io/bigsnpr/index.html). Run: `Rscript create_bigSNP.R -h` to see usage information.
 
 ## `impute.R`: Impute gene expression based on genotypes
-Reads in gene expression prediction models and imputes gene expression into genotypes from a bigSNP object. Run: `Rscript impute.R -h` to see usage information.
+Reads in a gene expression prediction model and imputes gene expression into genotypes from a bigSNP object. Run: `Rscript impute.R -h` to see usage information.
 
 ## `score.R`: Generate a score file for individual level prediction
 Reads in a gene expression prediction model and generates a score file for individual level prediction with PLINK. Run: `Rscript score.R -h` to see usage information.
