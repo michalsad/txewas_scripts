@@ -49,7 +49,7 @@ treeQTL <- function(pval.tab, tmp.dir, mult.test.adj = "BH", thr = 0.1) {
 
 
 parser <- argparser::arg_parser(
-  "Hierarchical error control with TreeQTL", 
+  "Hierarchical FDR control", 
   hide.opts = TRUE)
 
 parser <- argparser::add_argument(
