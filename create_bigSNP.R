@@ -193,5 +193,3 @@ bigSNP$map$marker.ID <- stringi::stri_c(bigSNP$map$chromosome,
                                         sep = "_")
 bigSNP <- bigsnpr::snp_save(bigSNP)
 cat(paste("Output saved to", bigSNP.file, "\n"))
-
-return(NULL)

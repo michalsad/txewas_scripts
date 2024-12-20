@@ -145,5 +145,3 @@ for (i in seq_along(models)) {
       basename(model)))
   }
 }
-
-return(NULL)
