@@ -41,9 +41,9 @@ save.plink.file <- function(x, out.file, samples = "auto", cnames = "auto") {
 }
 
 
-save.sample.file <- function(x, out.file) {
+save.sample.file <- function(x, out.file, ...) {
   data.table::fwrite(data.frame(FID = x, IID = x), file = out.file,
-                     quote = FALSE, sep = "\t", na = NA)
+                     quote = FALSE, sep = "\t", na = NA, ...)
   out.file
 }
 
@@ -189,7 +189,8 @@ if (length(na.inds) > 0) {
 
 keep.sample.file <- save.sample.file(
   samples,
-  out.file = path.join(tmp.dir, "keep.sample"))
+  out.file = path.join(tmp.dir, "keep.sample"),
+  col.names = FALSE)
 grm.file.prefix <- path.join(tmp.dir, "grm_ldak")
 
 cmd <- paste(
