@@ -180,10 +180,12 @@ na.inds <- which(apply(do.call("cbind", list(pheno, env, covars)), 1,
                        function(x) any(is.na(x))))
 warning(paste(length(na.inds), "samples discarded due to missing values!"))
 
-samples <- samples[-na.inds]
-pheno <- pheno[-na.inds]
-env <- env[-na.inds]
-covars <- covars[-na.inds,]
+if (length(na.inds) > 0) {
+  samples <- samples[-na.inds]
+  pheno <- pheno[-na.inds]
+  env <- env[-na.inds]
+  covars <- covars[-na.inds,]
+}
 
 keep.sample.file <- save.sample.file(
   samples,
