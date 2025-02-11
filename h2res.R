@@ -276,5 +276,3 @@ cat(paste("h2response pvalue:", formatC(pval.res, format = "e", digits = 2),
 if (!is.na(argv$out)) {
   save(gxemm.out, file = argv$out)
 }
-
-return(NULL)
