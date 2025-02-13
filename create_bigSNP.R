@@ -127,11 +127,11 @@ if (length(argv$samples) == 2) {
   keep.idx <- which(bgen.sample %in% keep.sample)
   
   save.sample.file(bgen.sample[keep.idx], 
-                   out.file = paste0(backing.file, ".sample"))
+                   out.file = paste0(backing.file, ".rds.sample"))
   
   keep.unmatched <- keep.sample[!keep.sample %in% bgen.sample]
   
-  if (length(keep.sample) > 0){
+  if (length(keep.unmatched) > 0){
     out.unmatched <- paste0(backing.file, ".unmatched.samples")
     data.table::fwrite(list(keep.unmatched), file = out.unmatched, 
                        quote = FALSE, row.names = FALSE, col.names = FALSE)
@@ -151,9 +151,9 @@ if (is.na(argv$mfi_dir)) {
 snps <- data.table::fread(mfi.file, select = 1, data.table = FALSE,
                           showProgress = FALSE)[, 1]
 
-if (grepl("^\\d+:", snps[1])) {
-  snps <- stringi::stri_replace_first_fixed(snps, ":", "_")
-}
+# if (grepl("^\\d+:", snps[1])) {
+#   snps <- stringi::stri_replace_first_fixed(snps, ":", "_")
+# }
 
 if (!is.na(argv$snps)) {
   snps.keep <- data.table::fread(argv$snps, header = FALSE, data.table = FALSE,

@@ -57,6 +57,7 @@ vprod <- function(genotypes, wgts){
   
   if (any(mask)) {
     w <- wgts[snpid,]
+    names(w) <- snpid
     w[snpid[mask]] <- -w[snpid[mask]]
     imp.expr <- bigstatsr::big_prodVec(genotypes$genotypes, w,
                                        ind.col = geno.snpidx)
@@ -115,7 +116,7 @@ argv <- argparser::parse_args(parser)
 
 models <- data.table::fread(argv$models, header = FALSE, 
                             data.table = FALSE)[, 1]
-samples <- read.sample.file(sub.ext(argv$rds, new.ext = "sample"))
+samples <- read.sample.file(sub.ext(argv$rds, new.ext = "rds.sample"))
 geno <- bigsnpr::snp_attach(argv$rds)
 
 for (i in seq_along(models)) {
@@ -134,7 +135,7 @@ for (i in seq_along(models)) {
                                                 wgt$snps[, 5], wgt$snps[, 6],
                                                 sep = "_")
     
-    imp.expr <- -vprod(geno, wgt$wgt.matrix)
+    imp.expr <- vprod(geno, wgt$wgt.matrix)
     
     out.file <- path.join(argv$outdir, paste0(basename(model), ".imp"))
     save.plink.file(imp.expr, out.file = out.file, samples = samples,
