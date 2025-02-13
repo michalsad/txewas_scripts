@@ -151,9 +151,9 @@ if (is.na(argv$mfi_dir)) {
 snps <- data.table::fread(mfi.file, select = 1, data.table = FALSE,
                           showProgress = FALSE)[, 1]
 
-# if (grepl("^\\d+:", snps[1])) {
-#   snps <- stringi::stri_replace_first_fixed(snps, ":", "_")
-# }
+if (grepl("^\\d+:", snps[1])) {
+  snps <- stringi::stri_replace_first_fixed(snps, ":", "_")
+}
 
 if (!is.na(argv$snps)) {
   snps.keep <- data.table::fread(argv$snps, header = FALSE, data.table = FALSE,
