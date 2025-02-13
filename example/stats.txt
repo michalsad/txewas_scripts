@@ -1,0 +1,2 @@
+example/txewas_blood.stats
+example/txewas_liver.stats
