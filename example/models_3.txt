@@ -1,0 +1,10 @@
+example/gene_expr_models/GENE21.wgt
+example/gene_expr_models/GENE22.wgt
+example/gene_expr_models/GENE23.wgt
+example/gene_expr_models/GENE24.wgt
+example/gene_expr_models/GENE25.wgt
+example/gene_expr_models/GENE26.wgt
+example/gene_expr_models/GENE27.wgt
+example/gene_expr_models/GENE28.wgt
+example/gene_expr_models/GENE29.wgt
+example/gene_expr_models/GENE30.wgt
