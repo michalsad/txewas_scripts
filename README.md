@@ -4,6 +4,10 @@ Code accompanying:
 
 * M. Sadowski, M. Thompson, J. Mefford, T. Haldar, A. Oni-Orisan, R. Border, A. Pazokitoroudi, N. Cai, J. F. Ayroles, S. Sankararaman, A. W. Dahl, and N. Zaitlen, [Characterizing the genetic architecture of drug response using gene-context interaction methods](https://www.cell.com/cell-genomics/fulltext/S2666-979X(24)00351-3), Cell Genomics, 2024.
 
+For step-by-step instructions see:
+
+* M. Sadowski, A. W. Dahl, and N. Zaitlen, [Protocol to estimate the heritability of drug response with GxEMM and identify gene-drug interactions with TxEWAS](https://star-protocols.cell.com/protocols/4164), STAR Protocols, 2025.
+
 ## `h2res.R`: Estimate the heritability of drug response
 Estimates the SNP heritability of the phenotype change after treatment ($h^2_\text{response}$) from single time point measurements of this phenotype in drug users and non-users. Utilizes [GxEMM](https://github.com/andywdahl/gxemm). Run: `Rscript h2res.R -h` to see usage information.
 
